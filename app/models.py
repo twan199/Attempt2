@@ -8,7 +8,7 @@ class Imagedata(db.Model):
     # Ensures table will be named in plural and not in singular
     # as is the name of the model
     __tablename__ = 'imagedatas'
-
+    id = db.Column(db.Integer, primary_key=True)
     startdate = db.Column('startdate', db.String(10), unique=True, nullable=True, primary_key=True)
     enddate = db.Column('enddate', db.String(10), unique=True, nullable=True)
     text = db.Column('text', db.String(255), unique=False, nullable=True)

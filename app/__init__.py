@@ -4,6 +4,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_bootstrap import Bootstrap
 
 # local imports
 from config import app_config
@@ -20,8 +21,14 @@ def create_app(config_name):
     #@app.route('/')
     #def hello_world():
     #    return 'Hello, World!'
-
+    app.config.update(dict(
+        SECRET_KEY="powerful secretkey",
+        WTF_CSRF_SECRET_KEY="a csrf secret key"
+    ))
     migrate = Migrate(app, db)
+    Bootstrap(app)
+    db.init_app(app)
+
     from app import models
 
     from .newupload import newupload as newupload_blueprint
