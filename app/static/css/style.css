@@ -3,7 +3,7 @@
 body, html {
     width: 100%;
     height: 100%;
-    background-color: #565656;
+    background-color: #71747a;
 }
 
 body, h1, h2, h3 {
@@ -13,11 +13,11 @@ body, h1, h2, h3 {
 }
 
 a, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
-  color: #aec251;
+  color: #008079;
 }
 
 a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
-  color: #687430;
+  color: #fa9f42;
 }
 
 footer {
@@ -33,17 +33,17 @@ p.copyright {
     width: 50%;
     margin: auto;
     color: #687430;
-    background-color: #e6ecca;
-    border-color: #aec251;
+    background-color: #e6ecca; 
+    border-color: #008079;
 }
 
 .btn-default {
-    border-color: #aec251;
-    color: #aec251;
+    border-color: #008079;
+    color: #008079;
 }
 
 .btn-default:hover {
-    background-color: #aec251;
+    background-color: #fa9f42;
 }
 
 .center {

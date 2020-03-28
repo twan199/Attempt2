@@ -8,7 +8,7 @@ from .. import db
 from ..models import Imagedata
 
 
-@newupload.route('/', methods=['GET', 'POST'])
+@newupload.route('/upload', methods=['GET', 'POST'])
 def upload():
     form = RegistrationForm()
     if form.validate_on_submit():
@@ -25,4 +25,4 @@ def upload():
         return redirect(url_for('newupload.upload'))
 
     # load registration template
-    return render_template('newupload/register.html', form=form, title='Register')
+    return render_template('newupload/register.html', form=form, title='Upload')

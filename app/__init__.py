@@ -32,7 +32,7 @@ def create_app(config_name):
     from app import models
 
     from .newupload import newupload as newupload_blueprint
-    app.register_blueprint(newupload_blueprint, url_prefix='/upload')
+    app.register_blueprint(newupload_blueprint, url_prefix='/')
 
     from .uploadedimages import uploadedimages as uploadedimages_blueprint
     app.register_blueprint(uploadedimages_blueprint, url_prefix='/')
