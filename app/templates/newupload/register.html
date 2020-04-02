@@ -1,5 +1,7 @@
 <!-- app/templates/newupload/register.html -->
-
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script src="/static/js/readUrl.js"></script>
 {% import "bootstrap/wtf.html" as wtf %}
 {% extends "base.html" %}
 {% block title %}Register{% endblock %}
@@ -9,6 +11,9 @@
     <h1>Upload new image</h1>
     <br/>
     {{ wtf.quick_form(form) }}
+    <input type='file' onchange="readURL(this);" />
+    <br>
+    <img id="blah" src="#"/>
   </div>
 </div>
 {% endblock %}
