@@ -11,6 +11,6 @@ class RegistrationForm(FlaskForm):
     """
     startdate = StringField('Start date', validators=[DataRequired()])
     enddate = StringField('End date', validators=[DataRequired()])
-    text = StringField('Comments', validators=[DataRequired()])
+    text = StringField('Comments')
     submit = SubmitField('Submit')
   
