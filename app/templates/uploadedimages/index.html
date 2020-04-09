@@ -7,12 +7,38 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="intro-message">
-                    <h1>P</h1>
-                    <hr class="intro-divider">
-                    </ul>
+                {% for row in rows %}
+                <div class="table-text">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="row">Start date</th>
+                                <td>{{row['startdate']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">End date</th>
+                                <td>{{row.enddate}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Comment</th>
+                                <td>{{row.text}}</td>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
+                <div class="table-image">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <td>Image place</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <hr class="intro-divider">
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>

@@ -22,7 +22,7 @@ def upload():
         flash('You have successfully uploaded')
 
         # redirect to the login page
-        return redirect(url_for('newupload.upload'))
+        return redirect(url_for('uploadedimages.homepage'))
 
     # load registration template
     return render_template('newupload/register.html', form=form, title='Upload')

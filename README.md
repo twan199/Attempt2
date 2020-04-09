@@ -3,7 +3,7 @@
 ## Task list
 ### Database
 - [x] working database
-- [X] Make database viewable on webpage /views
+- [X] Make database viewable on webpage ```/views```
 - [ ] Database on view images page nicely formatted
 - [ ] Reformat WTFfroms to create date selector
 - [ ] Image link to database -> Hash location saved
