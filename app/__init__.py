@@ -19,16 +19,11 @@ def create_app(config_name):
     app.config.from_object(app_config[config_name])
     app.config.from_pyfile('config.py')
 
-    #@app.route('/')
-    #def hello_world():
-    #    return 'Hello, World!'
     app.config.update(dict(
         SECRET_KEY="powerful secretkey",
         WTF_CSRF_SECRET_KEY="a csrf secret key"
     ))
     Bootstrap(app)
-    #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'crud.sqlite')
-    #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///instance/sqlalchemy_database.db'
     migrate = Migrate(app, db)
     
     db.init_app(app)
