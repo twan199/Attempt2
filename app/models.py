@@ -17,7 +17,7 @@ class Imagedata(db.Model):
     def __repr__(self):
     	return '<Imagedata: {}'.format(self.path)
 
-class Imagedataschema(object):
+class Imagedataschema(ma.Schema):
     class meta:
         fields = ('startdate', 'enddate', 'text')
             
