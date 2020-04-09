@@ -11,7 +11,6 @@ def homepage():
 
 @uploadedimages.route("/view/", methods=["GET"])
 def user_detail():
-    images_schema = Imagedataschema(many=False)
-    all_users = Imagedata.query.all()
-    result = images_schema.dump(all_users)
-    return images_schema.jsonify(result)
+    data = Imagedata.query.all()
+    result = [d.as_dict() for d in data]
+    return jsonify(result=result)
