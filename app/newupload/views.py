@@ -21,8 +21,8 @@ def upload():
         if not os.path.isdir(newpath):
             os.mkdir(os.path.join(newpath))
         f.save(os.path.join(newpath, filename))
-        image = Imagedata(startdate=form.startdate.data,
-                          enddate=form.enddate.data,
+        image = Imagedata(startdate=form.startdate.data.strftime('%d.%m.%Y'),
+                          enddate=form.enddate.data.strftime('%d.%m.%Y'),
                           text=form.text.data,
                           path=filename)
         print(form.text.data)
