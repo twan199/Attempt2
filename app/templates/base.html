@@ -2,43 +2,75 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>{{ title }} | Biogrund GmbH</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="{{ url_for('uploadedimages.homepage') }}">View uploaded images</a></li>
-                  <li><a href="{{ url_for('newupload.upload') }}">Upload new Image</a></li>
-              </ul>
-              <img src="./static/img/intro-bg.png" alt="" style="position:relative; left:20px; top:10px; width:108px; height:24px; border:none;" />
-          </div>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-default navbar-fixed-top topnav"
+      role="navigation"
+    >
+      <div class="container topnav">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="{{ url_for('uploadedimages.homepage') }}"
+                >View uploaded images</a
+              >
+            </li>
+            <li>
+              <a href="{{ url_for('newupload.upload') }}">Upload new Image</a>
+            </li>
+          </ul>
+          <img
+            src="./static/img/intro-bg.png"
+            alt=""
+            style="
+              position: relative;
+              left: 20px;
+              top: 10px;
+              width: 108px;
+              height: 24px;
+              border: none;
+            "
+          />
+        </div>
+      </div>
     </nav>
     <div class="wrapper">
-      {% block body %}
-      {% endblock %}
+      {% block body %} {% endblock %}
       <div class="push"></div>
     </div>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright text-muted small">Copyright © 2020. All Rights Reserved</p>
-                </div>
-            </div>
+      <div class="container" style="margin-top: auto;">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="copyright text-muted small">
+              Copyright © 2020. All Rights Reserved
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

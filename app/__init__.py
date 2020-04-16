@@ -14,18 +14,18 @@ from config import app_config
 db = SQLAlchemy()
 ma = Marshmallow()
 
+
 def create_app(config_name):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(app_config[config_name])
     app.config.from_pyfile('config.py')
 
-    app.config.update(dict(
-        SECRET_KEY="powerful secretkey",
-        WTF_CSRF_SECRET_KEY="a csrf secret key"
-    ))
+    app.config.update(
+        dict(SECRET_KEY="powerful secretkey",
+             WTF_CSRF_SECRET_KEY="a csrf secret key"))
     Bootstrap(app)
     migrate = Migrate(app, db)
-    
+
     db.init_app(app)
 
     from app import models
