@@ -9,9 +9,11 @@
 - [x] Database on view images page nicely formatted
 - [x] Reformat WTFfroms to create date selector
 - [x] Image link to database
-- [ ] Use old script from (1) to optimize image saving -> Hash location saved
+- [x] Use old script from (1) to optimize image saving -> Hash location saved
+- [ ] Display image in html
+- [ ] Improve table css
 
-### Miscialinuious
+### Miscellaneous
 
 - [ ] view image in upload
 - [ ] html/css optimization

@@ -8,6 +8,7 @@ from ..models import Imagedata
 from werkzeug.utils import secure_filename
 import os
 from flask import current_app as app
+from .imageprocessor import create_hash
 
 
 @newupload.route('/upload', methods=['GET', 'POST'])
@@ -16,16 +17,15 @@ def upload():
     if form.validate_on_submit():
         f = form.path.data
         filename = secure_filename(f.filename)
-
         newpath = os.path.join(app.instance_path, "images")
-        if not os.path.isdir(newpath):
-            os.mkdir(os.path.join(newpath))
+        os.makedirs(newpath, exist_ok=True)
         f.save(os.path.join(newpath, filename))
+        newfilename = create_hash(filename, newpath)
         image = Imagedata(startdate=form.startdate.data.strftime('%d.%m.%Y'),
                           enddate=form.enddate.data.strftime('%d.%m.%Y'),
                           text=form.text.data,
-                          path=filename)
-        print(form.text.data)
+                          path=newfilename)
+        # print(form.text.data)
         # add employee to the database
         db.session.add(image)
         db.session.commit()
