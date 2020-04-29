@@ -39,15 +39,3 @@ def upload():
     return render_template('newupload/register.html',
                            form=form,
                            title='Upload')
-
-
-# MEDIA_FOLDER = '/mnt/c/Users/Bouts/Documents/Biogrund/attempt2test/Attempt2/instance/'
-
-# @app.fixture
-# def app_context(self):
-#     with app.app_context():
-#         yield
-
-# @app.route('/<path:filename>')
-# def download_file(filename):
-#     return send_from_directory(MEDIA_FOLDER, filename, as_attachment=True)
