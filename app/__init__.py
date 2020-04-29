@@ -16,24 +16,24 @@ ma = Marshmallow()
 
 
 def create_app(config_name):
-    app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object(app_config[config_name])
-    app.config.from_pyfile('config.py')
-
-    app.config.update(
+    myapp = Flask(__name__, instance_relative_config=True)
+    myapp.config.from_object(app_config[config_name])
+    myapp.config.from_pyfile('config.py')
+    myapp.config.update(
         dict(SECRET_KEY="powerful secretkey",
              WTF_CSRF_SECRET_KEY="a csrf secret key"))
-    Bootstrap(app)
-    migrate = Migrate(app, db)
 
-    db.init_app(app)
+    Bootstrap(myapp)
+    migrate = Migrate(myapp, db)
+
+    db.init_app(myapp)
 
     from app import models
 
     from .newupload import newupload as newupload_blueprint
-    app.register_blueprint(newupload_blueprint, url_prefix='/')
+    myapp.register_blueprint(newupload_blueprint, url_prefix='/')
 
     from .uploadedimages import uploadedimages as uploadedimages_blueprint
-    app.register_blueprint(uploadedimages_blueprint, url_prefix='/')
+    myapp.register_blueprint(uploadedimages_blueprint, url_prefix='/')
 
-    return app
+    return myapp

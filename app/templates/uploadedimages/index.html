@@ -31,16 +31,9 @@
                 <th></th>
                 <td>
                   <img
-                    src="../../instance/images/68f21755dfe6face349998a7409c18d5/thumbnail.png"
-                    alt=""
-                    style="
-                      position: relative;
-                      left: 20px;
-                      top: 10px;
-                      width: 108px;
-                      height: 24px;
-                      border: none;
-                    "
+                    src="{{ url_for('uploadedimages.custom_static', filename=row[4].split('/')[-2] + '/thumbnail.png')}}"
+                    alt=" "
+                    class="table-image-image"
                   />
                 </td>
               </tr>
