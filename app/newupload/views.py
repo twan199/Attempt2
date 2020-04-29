@@ -29,7 +29,8 @@ def upload():
         # add employee to the database
         db.session.add(image)
         db.session.commit()
-        flash('You have successfully uploaded')
+
+        # flash('You have successfully uploaded')
 
         # redirect to the login page
         return redirect(url_for('uploadedimages.homepage'))

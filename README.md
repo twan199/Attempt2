@@ -11,8 +11,8 @@
 - [x] Image link to database
 - [x] Use old script from (1) to optimize image saving -> Hash location saved
 - [x] Display image in html
-- [ ] Improve table css
-- [ ] Expand database image locations by multiple, incl. thumbnail
+- [x] Improve table css
+- [ ] Add please wait, uploading message when commiting -> flash
 
 ### Miscellaneous
 
