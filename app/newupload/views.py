@@ -11,6 +11,7 @@ from flask import current_app as app
 from .imageprocessor import create_hash
 
 
+
 @newupload.route('/upload', methods=['GET', 'POST'])
 def upload():
     form = RegistrationForm()

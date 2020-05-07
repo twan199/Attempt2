@@ -12,14 +12,18 @@
 - [x] Use old script from (1) to optimize image saving -> Hash location saved
 - [x] Display image in html
 - [x] Improve table css
-- [ ] Add please wait, uploading message when commiting -> flash
 
 ### Miscellaneous
 
-- [ ] view image in upload
-- [ ] html/css optimization
 - [x] german date format
-- [ ] german translation
+- [ ] html/css optimization
+- [ ] navbar fix
 - [ ] edit/delete button for signatures
+- [ ] german translation
 - [ ] error handling!!
-- [ ] add comments script
+- [ ] add documentation script
+
+### ToDo
+
+- [ ] Add please wait, uploading message when commiting
+- [ ] view image in upload

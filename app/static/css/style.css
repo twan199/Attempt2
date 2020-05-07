@@ -63,6 +63,7 @@ td,
 th {
   padding: 10px 15px;
   text-align: left;
+  white-space: nowrap;
 }
 
 .alert-info {

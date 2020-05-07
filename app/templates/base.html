@@ -5,7 +5,11 @@
   <head>
     <title>{{ title }} | Biogrund GmbH</title>
     <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      href="{{url_for('static', filename='favicon.ico')}}"
+      rel="shortcut icon"
+    />
+    <link
+      href="{{url_for('static', filename='css/bootstrap.min.css')}}"
       rel="stylesheet"
     />
     <link
@@ -58,7 +62,7 @@
       </div>
     </nav>
     <div class="wrapper">
-      {% block body %} {% endblock %}
+      {% block body %}{% endblock %}
       <div class="push"></div>
     </div>
     <footer>
