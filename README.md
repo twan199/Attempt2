@@ -16,8 +16,8 @@
 ### Miscellaneous
 
 - [x] german date format
-- [ ] html/css optimization
-- [ ] navbar fix
+- [x] html/css optimization
+- [x] navbar fix
 - [ ] edit/delete button for signatures
 - [ ] german translation
 - [ ] error handling!!
