@@ -19,6 +19,7 @@
 - [x] html/css optimization
 - [x] navbar fix
 - [x] delete button for signatures
+- [x] remove extra whitespace `/`
 - [ ] edit button for signatures
 - [ ] german translation
 - [ ] error handling
