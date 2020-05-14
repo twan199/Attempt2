@@ -18,9 +18,10 @@
 - [x] german date format
 - [x] html/css optimization
 - [x] navbar fix
-- [ ] edit/delete button for signatures
+- [x] delete button for signatures
+- [ ] edit button for signatures
 - [ ] german translation
-- [ ] error handling!!
+- [ ] error handling
 - [ ] add documentation script
 
 ### ToDo
