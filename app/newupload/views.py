@@ -11,7 +11,6 @@ from flask import current_app as app
 from .imageprocessor import create_hash
 
 
-
 @newupload.route('/upload', methods=['GET', 'POST'])
 def upload():
     form = RegistrationForm()
@@ -26,8 +25,7 @@ def upload():
                           enddate=form.enddate.data.strftime('%d.%m.%Y'),
                           text=form.text.data,
                           path=newfilename)
-        # print(form.text.data)
-        # add employee to the database
+
         db.session.add(image)
         db.session.commit()
 

@@ -36,4 +36,7 @@ def create_app(config_name):
     from .uploadedimages import uploadedimages as uploadedimages_blueprint
     myapp.register_blueprint(uploadedimages_blueprint, url_prefix='/')
 
+    from .editupload import editupload as editupload_blueprint
+    myapp.register_blueprint(editupload_blueprint, url_prefix='/')
+
     return myapp

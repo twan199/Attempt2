@@ -20,7 +20,7 @@ class Imagedata(db.Model):
     path = db.Column('path', db.String(255), unique=True, nullable=True)
 
     def __repr__(self):
-        return '<Imagedata: {}'.format(self.path)
+        return 'Path: {}'.format(self.path)
 
     def as_dict(self):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}

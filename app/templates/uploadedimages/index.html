@@ -1,4 +1,4 @@
-<!-- app/templates/home/index.html -->
+<!-- app/templates/uploadedimages/index.html -->
 
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block body %}
 <div class="intro-header">
@@ -25,12 +25,17 @@
               </tr>
               <tr>
                 <th>
-                  <input
-                    type="submit"
-                    class="btn btn-default"
-                    name="submit"
-                    value="Edit"
-                  />
+                  <form
+                    action="{{ url_for('editupload.edit', id=row[0])}}"
+                    method="post"
+                  >
+                    <input
+                      type="submit"
+                      class="btn btn-default"
+                      name="submit"
+                      value="Edit"
+                    />
+                  </form>
                 </th>
                 <td>
                   <form

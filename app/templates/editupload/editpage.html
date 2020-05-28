@@ -1,0 +1,47 @@
+<!-- app/templates/editupload/editpage.html -->
+<script
+  class="jsbin"
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+></script>
+<script
+  class="jsbin"
+  src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+></script>
+{% import "bootstrap/wtf.html" as wtf %} {% extends "base.html" %} {% block
+title %}Edit{% endblock %} {% block body %}
+<div class="content-section">
+  <div class="center">
+    <h1>Edit image</h1>
+
+    <br />
+    <img
+      src="{{url_for('uploadedimages.custom_static', filename=imagepath.split('/')[-2] + '/thumbnail.png')}}"
+      alt=" "
+      class="table-image-image"
+    />
+    <br />
+
+    <div style="margin-top: 150px;">
+      <form class="form" method="post" role="form">
+        {{ form.hidden_tag() }} {{ form.csrf_token }} {{ wtf.form_errors(form,
+        hiddens="only") }} {{ wtf.form_field(form.startdate)}} {{
+        wtf.form_field(form.enddate)}} {{ wtf.form_field(form.text) }}
+        <input
+          type="submit"
+          class="btn btn-default"
+          name="submit"
+          value="Accept changes"
+        />
+        <button
+          style="margin-left: 1cm;"
+          type="button"
+          onclick="window.location.href='{{ url_for('uploadedimages.homepage')}}';"
+          class="btn btn-default"
+        >
+          Cancel
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

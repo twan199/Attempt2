@@ -2,7 +2,7 @@
 
 from flask_wtf import FlaskForm
 from wtforms import PasswordField, StringField, SubmitField, ValidationError
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, Optional
 from wtforms.fields.html5 import DateField
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from ..models import Imagedata
@@ -14,6 +14,7 @@ class RegistrationForm(FlaskForm):
     """
     path = FileField('Upload image here',
                      validators=[
+                         Optional(),
                          FileRequired(),
                          FileAllowed(['jpg', 'png', 'gif'], 'Images only!')
                      ])
