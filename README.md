@@ -4,7 +4,7 @@
 
 ### Database
 
-- [x] working database
+- [x] Working database
 - [x] Make database viewable on webpage `/view`
 - [x] Database on view images page nicely formatted
 - [x] Reformat WTFfroms to create date selector
@@ -24,6 +24,7 @@
 - [ ] german translation
 - [ ] error handling
 - [ ] add documentation script
+- [ ] HTML optimization
 
 ### ToDo
 
