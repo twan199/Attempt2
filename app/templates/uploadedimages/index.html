@@ -1,6 +1,7 @@
 <!-- app/templates/uploadedimages/index.html -->
 
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block body %}
+{% extends "base.html" %} {% block title %}Startseite{% endblock %} {% block
+body %}
 <div class="intro-header">
   <div class="container">
     <div class="row">
@@ -10,15 +11,15 @@
           <table>
             <thead>
               <tr>
-                <th scope="row">Start date</th>
+                <th scope="row">Anfangsdatum</th>
                 <td>{{row[1]}}</td>
               </tr>
               <tr>
-                <th scope="row">End date</th>
+                <th scope="row">Enddatum</th>
                 <td>{{row[2]}}</td>
               </tr>
               <tr>
-                <th scope="row">Comment</th>
+                <th scope="row">Anmerkungen</th>
                 <td style="white-space: normal;">
                   {{row[3]}}
                 </td>
@@ -33,7 +34,7 @@
                       type="submit"
                       class="btn btn-default"
                       name="submit"
-                      value="Edit"
+                      value="Bearbeiten"
                     />
                   </form>
                 </th>
@@ -46,7 +47,7 @@
                       type="submit"
                       class="btn btn-default"
                       name="submit"
-                      value="Delete"
+                      value="Löschen"
                     />
                   </form>
                 </td>

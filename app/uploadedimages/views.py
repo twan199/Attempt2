@@ -17,12 +17,8 @@ def homepage():
     c = conn.cursor()
     cur = c.execute('SELECT * FROM db_imagesdata')
     return render_template('uploadedimages/index.html',
-                           title="View Images",
+                           title="Bilder anschauen",
                            rows=cur.fetchall())
-
-    #data = Imagedata.query.all()
-    #result = [d.as_dict() for d in data]
-    #return render_template('uploadedimages/index.html', title="View Images", output_data = result)
 
 
 @uploadedimages.route("/view/", methods=["GET"])

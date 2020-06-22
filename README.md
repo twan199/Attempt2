@@ -21,7 +21,7 @@
 - [x] delete button for signatures
 - [x] remove extra whitespace `/`
 - [x] edit button for signatures
-- [ ] german translation
+- [x] german translation
 - [ ] error handling
 - [ ] add documentation script
 - [ ] HTML optimization

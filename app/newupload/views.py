@@ -37,4 +37,4 @@ def upload():
     # load registration template
     return render_template('newupload/register.html',
                            form=form,
-                           title='Upload')
+                           title='Hochladen')

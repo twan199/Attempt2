@@ -10,19 +10,19 @@ from ..models import Imagedata
 
 class RegistrationForm(FlaskForm):
     """
-    Form for users to create new account
+
     """
-    path = FileField('Upload image here',
+    path = FileField('Bild hier hochladen',
                      validators=[
                          Optional(),
                          FileRequired(),
                          FileAllowed(['jpg', 'png', 'gif'], 'Images only!')
                      ])
-    startdate = DateField('Start date',
+    startdate = DateField('Anfangsdatum',
                           format='%Y-%m-%d',
                           validators=[DataRequired()])
-    enddate = DateField('End date',
+    enddate = DateField('Enddatum',
                         format='%Y-%m-%d',
                         validators=[DataRequired()])
-    text = StringField('Comments')
-    submit = SubmitField('Submit')
+    text = StringField('Anmerkungen')
+    submit = SubmitField('Einreichen')

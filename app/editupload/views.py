@@ -27,7 +27,7 @@ def editpagee():
 
     form.populate_obj(image)
     return render_template('editupload/editpage.html',
-                           title='Edit Image',
+                           title='Bild bearbeiten',
                            form=form,
                            imagepath=image.path)
 
